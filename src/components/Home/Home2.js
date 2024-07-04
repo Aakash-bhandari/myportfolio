@@ -2,18 +2,19 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-} from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaWhatsapp, FaGithub, FaInstagram, FaMailBulk } from "react-icons/fa";
 
 function Home2() {
+  const iconStyles = {
+    linkedin: { color: '#0077b5' },
+    whatsapp: { color: '#25d366' },
+    github: { color: '#333' },
+    instagram: { color: '#E4405F' },
+  };
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
-        <Row>
+        {/* <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
@@ -57,7 +58,7 @@ function Home2() {
               <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>
           </Col>
-        </Row>
+        </Row> */}
         <Row>
           <Col md={12} className="home-about-social">
             <h1>FIND ME ON</h1>
@@ -67,47 +68,63 @@ function Home2() {
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="https://github.com/soumyajit4419"
+                  href="https://www.linkedin.com/in/aakash-bhandari-4b1355252/"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/Soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="home-social-icons"
+                  style={iconStyles.linkedin}
                 >
                   <FaLinkedinIn />
                 </a>
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.instagram.com/soumyajit4419"
+                  href="https://api.whatsapp.com/send/?phone=%2B919561651710&text=Hello,+Aakash"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour home-social-icons"
+                  className="home-social-icons"
+                  style={iconStyles.whatsapp}
                 >
-                  <AiFillInstagram />
+                  <FaWhatsapp />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://github.com/Aakash-Bhandari"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="home-social-icons"
+                  style={iconStyles.github}
+                >
+                  <FaGithub />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.instagram.com/_______________ak_/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="home-social-icons"
+                  style={iconStyles.instagram}
+                >
+                  <FaInstagram />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRwRCKwLwTtVTnQdhqGcMvNWJQgGdTVWSzPLBgwLZMvRBPlmjCklCdJLWnLLqrHKBqbnPgSL"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="home-social-icons"
+                  style={iconStyles.instagram}
+                >
+                  <FaMailBulk />
                 </a>
               </li>
             </ul>
           </Col>
         </Row>
+
       </Container>
     </Container>
   );

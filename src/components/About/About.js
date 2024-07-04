@@ -5,12 +5,14 @@ import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
+import Profile from "../../Assets/Profile.jpg"
+import dp from "../../Assets/dp.jpeg"
 import Toolstack from "./Toolstack";
-
+import Education from "./Education";
 function About() {
   return (
     <Container fluid className="about-section">
-      <Particle />
+      {/* <Particle /> */}
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
@@ -31,9 +33,13 @@ function About() {
             style={{ paddingTop: "120px", paddingBottom: "50px" }}
             className="about-img"
           >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+            <img src={dp} alt="about" className="img-fluid" />
           </Col>
         </Row>
+        <h1 className="project-heading">
+          <strong className="purple">Education </strong> 
+        </h1>
+        <Education />
         <h1 className="project-heading">
           Professional <strong className="purple">Skillset </strong>
         </h1>
@@ -44,8 +50,6 @@ function About() {
           <strong className="purple">Tools</strong> I use
         </h1>
         <Toolstack />
-
-        <Github />
       </Container>
     </Container>
   );
